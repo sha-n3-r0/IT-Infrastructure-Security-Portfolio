@@ -52,11 +52,9 @@ This repository serves as my **IT Support portfolio**, showcasing my skills, doc
 
 ## Portfolio Projects
 
-networking-practices/
- ├─ README.md
- ├─ ITP105-PRELIM-LABEXAM.pdf
- ├─ ITP105-MIDTERM-LABEXAM.pdf
- ├─ ITP105-FINALS-LABEXAM.pdf
+- ITP105-PRELIM-LABEXAM.pdf
+- ITP105-MIDTERM-LABEXAM.pdf
+- ITP105-FINALS-LABEXAM.pdf
 
 ## Internship Objective
 
