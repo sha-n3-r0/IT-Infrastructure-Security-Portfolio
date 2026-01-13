@@ -84,6 +84,7 @@ I am open to assignments through **government offices, private companies, or par
 
 - Microsoft Office Certification (Arellano U.)
 - HP Seminar (Arellano U.)
+- Visual Graphic Design NC III (AITSA - TESDA)
 - Creative Web Design (Telecall)
 - UMAK IT Olympic
 - Security Awareness Campaigns (Udemy)
