@@ -81,10 +81,13 @@ I am open to assignments through **government offices, private companies, or par
 ---
 
 ## Certifications & Training
-*(In progress / planned)*
-- Google IT Support
-- Networking fundamentals
-- Cybersecurity awareness training
+
+- Microsoft Office Certification (Arellano U.)
+- HP Seminar (Arellano U.)
+- Creative Web Design (Telecall)
+- UMAK IT Olympic
+- Security Awareness Campaigns (Udemy)
+- Vulnerability Scanning with Nmap: Network Scanning (Coursera)
 
 ---
 
