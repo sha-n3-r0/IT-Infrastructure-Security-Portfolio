@@ -58,6 +58,8 @@ This repository serves as my **IT Support portfolio**, showcasing my skills, doc
 - ITP105-PRELIM-LABEXAM.pdf
 - ITP105-MIDTERM-LABEXAM.pdf
 - ITP105-FINALS-LABEXAM.pdf
+- ITP111 SYS ADMIN 1.pdf
+- ITP111 SYS ADMIN 2.pdf
 
 ## Internship Objective
 
