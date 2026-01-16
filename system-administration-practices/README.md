@@ -1,44 +1,41 @@
-# System Administration II – Security & Network Threats
+## System Administration Practices & Laboratory Examinations
 
-This folder contains documentation and analysis based on **System Administration II** coursework.
-The focus is on identifying common **network and system security threats** and understanding
-their impact on organizations, users, and administrators.
+This section contains my **official laboratory documentation and hands-on system administration practices**
+completed as part of the course **ITP111 – System Administration**
+under the **Bachelor of Science in Information Technology (BSIT)** program
+at the **University of Cabuyao**.
 
-The content is defensive and educational, emphasizing awareness and mitigation rather than exploitation.
+These documents demonstrate my practical understanding of **system administration fundamentals,
+backup and recovery concepts, security configuration, administrative tasks,
+and system/network security awareness** using simulated lab environments.
 
-## Topics Covered
+---
 
-### Network & System Security Threats
-- Man-in-the-Middle (MitM) attacks
-- Phishing attacks
-- Malware infections
+### 📄 Included Documents
 
-### Administrative Perspective
-- How these threats occur
-- Why they are dangerous to systems and networks
-- The role of system administrators in prevention and response
+- **System Administration I Documentation**  
+  Focus: Backup and recovery concepts, security and access control,
+  basic system administration tasks, and administrative configuration  
+  📄 [ITP111 SYS ADMIN 1.pdf](./ITP111%20SYS%20ADMIN%201.pdf)
 
-### Security Mitigation
-- User awareness and policy enforcement
-- Secure network practices
-- System hardening and monitoring
+- **System Administration II Documentation**  
+  Focus: System and network security threats including Man-in-the-Middle (MitM) attacks,
+  phishing attacks, malware, and administrative mitigation practices  
+  📄 [ITP111 SYS ADMIN 2.pdf](./ITP111%20SYS%20ADMIN%202.pdf)
 
-## Folder Structure
+---
 
-### `threats/`
-Detailed explanations of each major threat type:
-- `mitm.md` – Man-in-the-Middle attacks
-- `phishing.md` – Social engineering and email-based attacks
-- `malware.md` – Viruses, worms, trojans, and ransomware
+### 🛠 Tools & Technologies Used
+- System Administration Fundamentals  
+- Backup & Recovery Concepts  
+- User and Access Control  
+- System and Network Security  
+- Security Threat Analysis (MitM, Phishing, Malware)  
+- Administrative Mitigation Practices  
 
-### `network-security.md`
-Overview of how these threats relate to network communication,
-data transmission, and administrative control.
+---
 
-### `mitigation.md`
-Defensive strategies and best practices used by system administrators
-to reduce risk and improve system security.
-
-## Notes
-This project is intended for academic and portfolio purposes.
-No real network credentials, private IPs, or sensitive data are included.
+### ⚠️ Note on Data Privacy
+All activities, configurations, explanations, and screenshots included in these documents
+are **academic and laboratory-based**. All data used are **simulated or mock data**
+and do **not** represent any production or real-world organizational systems.
