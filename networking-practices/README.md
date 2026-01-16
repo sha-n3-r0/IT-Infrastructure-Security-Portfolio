@@ -6,12 +6,30 @@ under the **Bachelor of Science in Information Technology (BSIT)** program
 at the **University of Cabuyao**.
 
 These documents demonstrate my practical understanding of **network design,
-VLAN implementation, VTP configuration, inter-VLAN routing, and network
-connectivity testing** using simulated lab environments.
+VLAN implementation, VTP configuration, inter-VLAN routing, static routing, IP
+addressing, and network connectivity testing** using simulated lab environments.
 
 ---
 
 ### 📄 Included Documents
+
+#### 🧪 Networking Activities (Hands-on Practices)
+
+- **Activity 1 – VLAN Configuration & Connectivity Testing**  
+  Focus: Basic VLAN setup, switch configuration, and host-to-host connectivity testing using ICMP  
+  📄 [ITP105-ACT1-ORCASITAS.pdf](./ITP105-ACT1-ORCASITAS.pdf)
+
+- **Activity 2 – Router & Switch Configuration**  
+  Focus: Router interface configuration, IP addressing, and basic switch setup  
+  📄 [ITP105-ACT2-ORCASITAS.pdf](./ITP105-ACT2-ORCASITAS.pdf)
+
+- **Activity 3 – Static Routing & Network Topology**  
+  Focus: Multi-router topology design, static routing configuration, and end-to-end connectivity verification  
+  📄 [ITP105-ACT3-ORCASITAS.pdf](./ITP105-ACT3-ORCASITAS.pdf)
+
+---
+
+#### 🧾 Laboratory Examinations
 
 - **Prelim Laboratory Examination**  
   Focus: VLAN and VTP configuration, basic network design, switch setup, and connectivity testing  
@@ -38,6 +56,6 @@ connectivity testing** using simulated lab environments.
 ---
 
 ### ⚠️ Note on Data Privacy
-All activities, configurations, and screenshots included in these documents
-are **academic and lab-based**. All data used are **simulated or mock data**
-and do not represent any production or real-world organizational networks.
+All activities, configurations, IP addresses, and screenshots included in these documents
+are **academic and laboratory-based**. All data used are **simulated or mock data**
+and do **not** represent any production or real-world organizational networks.
