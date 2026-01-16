@@ -52,6 +52,9 @@ This repository serves as my **IT Support portfolio**, showcasing my skills, doc
 
 ## Portfolio Projects
 
+- ITP105-ACT1-ORCASITAS.pdf
+- ITP105-ACT2-ORCASITAS.pdf
+- ITP105-ACT3-ORCASITAS.pdf
 - ITP105-PRELIM-LABEXAM.pdf
 - ITP105-MIDTERM-LABEXAM.pdf
 - ITP105-FINALS-LABEXAM.pdf
