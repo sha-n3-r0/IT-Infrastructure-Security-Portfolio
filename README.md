@@ -1,108 +1,197 @@
-# IT Support Portfolio
-**Shanner Aldous G. Orcasitas**
+# IT Infrastructure, Networking & Cybersecurity Portfolio
 
-📍 Cabuyao City, Laguna, Philippines  
-📧 orcasitas.shanneraldous@gmail.com  
-📞 +63 916 303 5358  
-🎓 BS Information Technology – University of Cabuyao  
+## Shanner Aldous G. Orcasitas
+
+📍 Cabuyao City, Laguna, Philippines
+📧 [orcasitas.shanneraldous32@gmail.com](mailto:orcasitas.shanneraldous32@gmail.com)
+📞 +63 916 303 5358
 
 ---
 
-## About Me
+## Professional Summary
 
-I am a **Bachelor of Science in Information Technology (BSIT) student** at the **University of Cabuyao**, seeking an **internship / on-the-job training** opportunity where I can apply and further develop my technical skills in a real-world professional environment.
+Information Technology graduate with practical experience in IT Support, Systems Administration, Networking, and Cybersecurity. Experienced in troubleshooting hardware and software issues, supporting end users, managing virtualized environments, configuring network services, and implementing security solutions in both professional and homelab environments.
 
-I have foundational knowledge and hands-on experience in **IT support, hardware and software troubleshooting, operating systems, networking, cybersecurity basics, and web development**. I am highly motivated, willing to learn, and adaptable to different work environments. I am particularly interested in roles that involve **technical support, system maintenance, and user assistance**.
-
-This repository serves as my **IT Support portfolio**, showcasing my skills, documentation practices, and problem-solving approach.
+My experience includes virtualization using Proxmox VE, network administration with pfSense, VPN deployment, network segmentation, firewall management, intrusion detection systems, and security monitoring. I am passionate about building secure and reliable infrastructure while continuously expanding my technical knowledge.
 
 ---
 
 ## Technical Skills
 
-### IT Support & Troubleshooting
-- Hardware and software troubleshooting
-- PC assembly and diagnostics
-- Printer and peripheral setup
-- Basic helpdesk support procedures
-- User assistance and issue documentation
+### Systems Administration
 
-### Operating Systems
-- Windows 10 / 11
-- Basic Linux commands and environment
+* Proxmox VE
+* Windows Server 2022
+* Ubuntu Server
+* Active Directory Fundamentals
+* User & Group Management
+* Virtual Machine Deployment
+* Server Maintenance
 
 ### Networking
-- Network connectivity troubleshooting
-- IP addressing (static & dynamic)
-- Basic LAN concepts
-- VLAN fundamentals (lab-based)
 
-### Cybersecurity (Basic)
-- System hardening basics
-- Malware awareness and prevention
-- User access and password safety practices
+* TCP/IP
+* DNS
+* DHCP
+* Static DHCP Reservations
+* NAT
+* VLAN Fundamentals
+* LAN/WAN Connectivity
+* Network Troubleshooting
+* VPN Technologies
 
-### Web & Development (Foundational)
-- Full-stack web development fundamentals
-- HTML, CSS, JavaScript
-- Basic backend concepts
-- Version control using Git & GitHub
+### Cybersecurity
 
----
+* pfSense Firewall Administration
+* OpenVPN
+* Suricata IDS/IPS
+* pfBlockerNG
+* Security Monitoring
+* Alert Analysis
+* Vulnerability Assessment
+* Nmap
 
-## Portfolio Projects
+### IT Support
 
-- ITP105-ACT1-ORCASITAS.pdf
-- ITP105-ACT2-ORCASITAS.pdf
-- ITP105-ACT3-ORCASITAS.pdf
-- ITP105-PRELIM-LABEXAM.pdf
-- ITP105-MIDTERM-LABEXAM.pdf
-- ITP105-FINALS-LABEXAM.pdf
-- ITP111 SYS ADMIN 1.pdf
-- ITP111 SYS ADMIN 2.pdf
+* Hardware Troubleshooting
+* Software Troubleshooting
+* End-User Support
+* Incident Documentation
+* System Deployment
+* Technical Documentation
 
-## Internship Objective
+### Development
 
-I am currently seeking an **internship or on-the-job training placement** where I can:
-- Apply my foundational IT knowledge
-- Gain hands-on experience in real organizational settings
-- Support technical operations and users
-- Learn from experienced IT professionals
-- Contribute positively to public service or private-sector IT environments
-
-I am open to assignments through **government offices, private companies, or partner institutions**, including placements facilitated by **PESO – City Government of Cabuyao** or technology-focused organizations such as **UniPC | Unicorp (Uniprint Group)**.
-
----
-
-## Soft Skills
-
-- Strong willingness to learn
-- Adaptable and flexible
-- Responsible and professional
-- Good communication skills
-- Patient and user-focused
-- Team-oriented mindset
+* Laravel
+* React
+* MySQL
+* Git & GitHub
+* HTML, CSS, JavaScript
 
 ---
 
-## Certifications & Training
+# Homelab Infrastructure
 
-- Microsoft Office Certification (Arellano U.)
-- HP Seminar (Arellano U.)
-- Visual Graphic Design NC III (AITSA - TESDA)
-- Creative Web Design (Telecall)
-- UMAK IT Olympic
-- Security Awareness Campaigns (Udemy)
-- Vulnerability Scanning with Nmap: Network Scanning (Coursera)
+My homelab environment is designed to simulate real-world enterprise infrastructure and security operations.
+
+```text
+Internet
+    │
+TP-Link Router
+    │
+Proxmox Host
+    │
+┌───────────────┐
+│    pfSense    │
+└───────┬───────┘
+        │
+ ┌──────┼──────────────┐
+ │      │              │
+Ubuntu  Windows     TrueNAS
+Server  Server      Storage
+ │
+Kali Linux
+```
+
+### Virtual Machines
+
+* pfSense
+* Ubuntu Server
+* Windows Server 2022
+* Kali Linux
+* TrueNAS
 
 ---
 
-## Contact Information
+# Homelab Project Documentation
 
-📧 Email: orcasitas.shanneraldous@gmail.com  
-📞 Contact Number: +63 916 303 5358  
-📍 Location: Cabuyao City, Laguna, Philippines  
+The following projects document the design, implementation, testing, and results of my cybersecurity and networking homelab.
+
+| Project | Description                    |
+| ------- | ------------------------------ |
+| Phase 1 | Static DHCP Reservations       |
+| Phase 2 | Firewall Rules Configuration   |
+| Phase 3 | Network Segmentation           |
+| Phase 4 | OpenVPN Deployment             |
+| Phase 5 | pfBlockerNG Configuration      |
+| Phase 6 | Suricata IDS Deployment        |
+| Phase 7 | Alert Analysis & Investigation |
+
+## Project Links
+
+* [01 - Static DHCP Reservations](docs/01-static-dhcp-reservations/README.md)
+* [02 - Firewall Rules Configuration](docs/02-firewall-rules/README.md)
+* [03 - Network Segmentation](docs/03-network-segmentation/README.md)
+* [04 - OpenVPN Deployment](docs/04-openvpn/README.md)
+* [05 - pfBlockerNG Configuration](docs/05-pfblockerng/README.md)
+* [06 - Suricata IDS Deployment](docs/06-suricata-ids/README.md)
+* [07 - Alert Analysis & Investigation](docs/07-alert-analysis/README.md)
 
 ---
 
-**Thank you for taking the time to review my portfolio. I am eager to learn, grow, and contribute as an IT Support Intern.**
+# Professional Experience
+
+## Sundia Group
+
+### Service Desk & Infrastructure Support
+
+*June 2025 – April 2026*
+
+* Provided technical support for hardware, software, and network-related issues.
+* Assisted in workstation deployment and system optimization.
+* Supported LAN/WAN connectivity and IP configuration.
+* Monitored server connectivity and infrastructure operations.
+* Maintained technical documentation and support records.
+* Assisted in website development using Laravel and React.
+
+## LionHearTV / PH Entertainment
+
+### Social Media Management
+
+*February 2026 – April 2026*
+
+* Managed social media content planning and publishing.
+* Created digital assets using Canva.
+* Conducted content research and trend analysis.
+* Maintained consistent brand communication.
+
+---
+
+# Certifications & Training
+
+* Microsoft Office Certification
+* Cisco Networking Basics
+* Vulnerability Scanning with Nmap
+* Security Awareness Campaigns
+* Creative Web Design NC III
+* Visual Graphic Design NC III
+* Cybersecurity – UMAK IT Olympic
+* HP Seminar
+
+---
+
+# Career Interests
+
+I am currently interested in opportunities related to:
+
+* IT Support Specialist
+* Service Desk Analyst
+* Network Support Technician
+* Junior System Administrator
+* NOC Analyst
+* SOC Analyst (Tier 1)
+* Cybersecurity Analyst
+
+---
+
+# Contact Information
+
+📧 Email: [orcasitas.shanneraldous32@gmail.com](mailto:orcasitas.shanneraldous32@gmail.com)
+
+📞 Mobile: +63 916 303 5358
+
+📍 Cabuyao City, Laguna, Philippines
+
+---
+
+> Thank you for visiting my portfolio. This repository showcases my hands-on experience in IT Infrastructure, Networking, Systems Administration, and Cybersecurity through practical projects and technical documentation.
