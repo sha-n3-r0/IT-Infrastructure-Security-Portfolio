@@ -70,27 +70,31 @@ My experience includes virtualization using Proxmox VE, network administration w
 
 ---
 
-# Homelab Infrastructure
-
-My homelab environment is designed to simulate real-world enterprise infrastructure and security operations.
+## Homelab Architecture
 
 ```text
-Internet
-    │
-TP-Link Router
-    │
-Proxmox Host
-    │
-┌───────────────┐
-│    pfSense    │
-└───────┬───────┘
-        │
- ┌──────┼──────────────┐
- │      │              │
-Ubuntu  Windows     TrueNAS
-Server  Server      Storage
- │
-Kali Linux
+                     Internet
+                         │
+                  TP-Link Router
+                         │
+                    Proxmox VE
+                         │
+                  pfSense Firewall
+                         │
+        ┌────────────────┴────────────────┐
+        │                                 │
+        ▼                                 ▼
+
+ Main LAN                          Lab Network
+ 192.168.10.0/24                   192.168.20.0/24
+ Gateway: 192.168.10.1             Gateway: 192.168.20.1
+
+ ├── Kali Linux                    ├── Ubuntu Server
+ └── TrueNAS*                      └── Windows Server 2022
+
+ *TrueNAS is normally isolated and
+  connected to the Main LAN only
+  when file transfers are required.
 ```
 
 ### Virtual Machines
