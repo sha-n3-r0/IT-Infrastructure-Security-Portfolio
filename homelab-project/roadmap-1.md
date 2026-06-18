@@ -162,33 +162,124 @@ Resolution:
 
 ---
 
-# Phase 4 – OpenVPN Remote Access
+# Phase 4 – OpenVPN Remote Access (Partially Completed)
 
 ## Objective
 
-Implement secure remote access to the homelab environment using OpenVPN.
+Implement a secure remote access VPN solution using OpenVPN on pfSense to allow remote access to the homelab environment.
 
 ## Tasks Performed
 
-* Created Internal Certificate Authority
-* Generated Server Certificate
-* Generated User Certificate
-* Configured OpenVPN Server
-* Configured WAN Firewall Rules
-* Configured OpenVPN Firewall Rules
-* Configured TP-Link Port Forwarding
+### Certificate Infrastructure
 
-## Verification
+Created:
+
+```text
+HomeVPN_CA
+```
+
+Purpose:
+
+* Establish trust between VPN clients and server.
+* Sign OpenVPN certificates.
+
+Created:
+
+```text
+OpenVPN_Server Certificate
+```
+
+Purpose:
+
+* Identify the VPN server.
+* Enable SSL/TLS encryption.
+
+Created:
+
+```text
+VPN User Certificate
+```
+
+Purpose:
+
+* Authenticate VPN users.
+* Restrict VPN access to authorized users only.
+
+---
+
+### OpenVPN Server Configuration
+
+Configured:
+
+```text
+Protocol: UDP
+Port: 1194
+Tunnel Network: 10.8.0.0/24
+Authentication:
+SSL/TLS + User Authentication
+```
+
+Configured:
+
+* OpenVPN Server
+* User Authentication
+* Certificate-Based Authentication
+* Tunnel Network
+
+---
+
+### Firewall Configuration
+
+Created WAN Firewall Rule:
+
+```text
+Allow UDP 1194
+```
+
+Created OpenVPN Interface Rule:
+
+```text
+Allow OpenVPN Clients
+```
 
 Verified:
 
+* Firewall rule functionality
+* OpenVPN interface accessibility
+
+---
+
+### Router Configuration
+
+Configured TP-Link Port Forwarding:
+
+```text
+UDP 1194
+→
+192.168.1.108
+```
+
+Purpose:
+
+* Forward VPN traffic from router to pfSense.
+
+---
+
+## Verification Performed
+
+Verified:
+
+```text
 ✓ OpenVPN Service Running
-
-✓ Certificate Authentication Working
-
-✓ Firewall Rules Applied
-
+✓ Certificate Authority Functional
+✓ Server Certificate Functional
+✓ User Certificate Functional
+✓ WAN Firewall Rule Present
+✓ OpenVPN Rule Present
 ✓ Port Forwarding Configured
+```
+
+---
 
 ## Issues Encountered
 
@@ -204,35 +295,79 @@ Investigation:
 
 * Verified OpenVPN service status.
 * Verified firewall rules.
+* Verified certificate configuration.
 * Verified TP-Link port forwarding.
-* Verified certificates.
 
-Resolution:
+---
 
-Discovered ISP assigned a private WAN address:
+### Carrier Grade NAT (CGNAT)
+
+Observed:
 
 ```text
+TP-Link WAN Address:
 10.10.10.x
 ```
 
-Identified Carrier Grade NAT (CGNAT) preventing inbound VPN connectivity.
+Analysis:
+
+The ISP assigned a private WAN address instead of a public IP address.
+
+This prevented inbound VPN connections from reaching the OpenVPN server despite correct configuration.
+
+---
 
 ## Skills Learned
 
+### VPN Technologies
+
+* OpenVPN Fundamentals
+* Remote Access VPN Concepts
+* VPN Authentication Methods
+* VPN Tunnel Configuration
+
+### Certificate Management
+
 * Public Key Infrastructure (PKI)
-* Certificate Management
+* Certificate Authority Management
+* Server Certificates
+* User Certificates
 * TLS Authentication
-* Remote Access VPN
+
+### Networking
+
 * Port Forwarding
 * NAT Concepts
-* Double NAT Troubleshooting
-* CGNAT Identification
+* Double NAT Analysis
+* WAN Connectivity Troubleshooting
+* Remote Access Design
+
+### Troubleshooting
+
+* OpenVPN Diagnostics
+* Service Verification
+* Firewall Validation
 * Network Path Analysis
+* Root Cause Analysis
+
+---
 
 ## Outcome
 
-Successfully deployed OpenVPN infrastructure and identified ISP-level limitations preventing external connectivity.
+OpenVPN infrastructure was successfully deployed and validated internally.
 
+Remote access testing could not be completed due to ISP Carrier Grade NAT (CGNAT).
+
+The project remains partially completed until:
+
+```text
+□ Public IP Address Obtained
+OR
+□ ISP Bridge Mode Implemented
+OR
+□ Alternative VPN Solution Deployed
+   (WireGuard / Tailscale)
+```
 ---
 
 # Phase 5 – Nmap Testing
