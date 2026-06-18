@@ -87,14 +87,11 @@ My experience includes virtualization using Proxmox VE, network administration w
 
  Main LAN                          Lab Network
  192.168.10.0/24                   192.168.20.0/24
+
  Gateway: 192.168.10.1             Gateway: 192.168.20.1
 
  ├── Kali Linux                    ├── Ubuntu Server
- └── TrueNAS*                      └── Windows Server 2022
-
- *TrueNAS is normally isolated and
-  connected to the Main LAN only
-  when file transfers are required.
+ └── TrueNAS                       └── Windows Server 2022
 ```
 
 ### Virtual Machines
@@ -107,37 +104,53 @@ My experience includes virtualization using Proxmox VE, network administration w
 
 ---
 
-# Homelab Project Documentation
+## Featured Project
 
-The following projects document the design, implementation, testing, and results of my cybersecurity and networking homelab.
+### Enterprise Security Homelab
 
-| Project | Description                    |
-| ------- | ------------------------------ |
-| Phase 1 | Static DHCP Reservations       |
-| Phase 2 | Firewall Rules Configuration   |
-| Phase 3 | Network Segmentation           |
-| Phase 4 | OpenVPN Deployment             |
-| Phase 5 | pfBlockerNG Configuration      |
-| Phase 6 | Suricata IDS Deployment        |
-| Phase 7 | Alert Analysis & Investigation |
+A hands-on infrastructure, networking, and cybersecurity project built using Proxmox VE, pfSense, Windows Server 2022, Ubuntu Server, Kali Linux, and TrueNAS.
 
-## Project Links
+The project was designed to develop practical experience in systems administration, network security, virtualization, monitoring, and security operations.
 
-* [01 - Static DHCP Reservations](docs/01-static-dhcp-reservations/README.md)
-* [02 - Firewall Rules Configuration](docs/02-firewall-rules/README.md)
-* [03 - Network Segmentation](docs/03-network-segmentation/README.md)
-* [04 - OpenVPN Deployment](docs/04-openvpn/README.md)
-* [05 - pfBlockerNG Configuration](docs/05-pfblockerng/README.md)
-* [06 - Suricata IDS Deployment](docs/06-suricata-ids/README.md)
-* [07 - Alert Analysis & Investigation](docs/07-alert-analysis/README.md)
+### Technologies Used
+
+* Proxmox VE
+* pfSense
+* OpenVPN
+* Suricata IDS
+* pfBlockerNG
+* Windows Server 2022
+* Ubuntu Server
+* Kali Linux
+* TrueNAS
+* Nmap
+
+### Project Coverage
+
+* Static DHCP Reservations
+* Firewall Rule Configuration
+* Network Segmentation
+* OpenVPN Deployment
+* pfBlockerNG Configuration
+* Suricata IDS Deployment
+* Security Alert Analysis
+* Nmap Security Testing
+
+📖 **Full Project Documentation**
+
+```text
+homelab-project/
+└── roadmap-1/
+    └── README.md
+```
 
 ---
 
-# Professional Experience
+## Professional Experience
 
-## Sundia Group
+### Sundia Group
 
-### Service Desk & Infrastructure Support
+#### Service Desk & Infrastructure Support
 
 *June 2025 – April 2026*
 
@@ -148,9 +161,9 @@ The following projects document the design, implementation, testing, and results
 * Maintained technical documentation and support records.
 * Assisted in website development using Laravel and React.
 
-## LionHearTV / PH Entertainment
+### LionHearTV / PH Entertainment
 
-### Social Media Management
+#### Social Media Management
 
 *February 2026 – April 2026*
 
@@ -161,7 +174,7 @@ The following projects document the design, implementation, testing, and results
 
 ---
 
-# Certifications & Training
+## Certifications & Training
 
 * Microsoft Office Certification
 * Cisco Networking Basics
@@ -174,7 +187,7 @@ The following projects document the design, implementation, testing, and results
 
 ---
 
-# Career Interests
+## Career Interests
 
 I am currently interested in opportunities related to:
 
@@ -188,14 +201,32 @@ I am currently interested in opportunities related to:
 
 ---
 
-# Contact Information
+## Repository Structure
+
+```text
+IT-Infrastructure-Security-Portfolio
+│
+├── README.md
+│
+├── homelab-project
+│   └── roadmap-1
+│       └── README.md
+│
+├── networking-practices
+│
+└── system-administration-practices
+```
+
+---
+
+## Contact Information
 
 📧 Email: [orcasitas.shanneraldous32@gmail.com](mailto:orcasitas.shanneraldous32@gmail.com)
 
 📞 Mobile: +63 916 303 5358
 
-📍 Cabuyao City, Laguna, Philippines
+📍 Location: Cabuyao City, Laguna, Philippines
 
 ---
 
-> Thank you for visiting my portfolio. This repository showcases my hands-on experience in IT Infrastructure, Networking, Systems Administration, and Cybersecurity through practical projects and technical documentation.
+> Thank you for visiting my portfolio. This repository showcases my hands-on experience in IT Infrastructure, Networking, Systems Administration, and Cybersecurity through practical projects, documentation, and real-world lab implementations.
