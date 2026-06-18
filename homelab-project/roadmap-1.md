@@ -116,92 +116,122 @@ Discovered pfSense processes rules top-to-bottom and adjusted rule order.
 
 # Phase 3 – Network Segmentation
 
-## Objective
+## Additional Issues Encountered
 
-Separate systems into security zones.
-
-## Tasks Performed
-
-### Created New Proxmox Bridge
-
-```text
-vmbr2
-```
-
-### Created New pfSense Interface
-
-```text
-OPT1
-```
-
-### Assigned Lab Devices
-
-```text
-Ubuntu Server
-Windows Server
-```
-
-to
-
-```text
-192.168.20.0/24
-```
-
-## Skills Learned
-
-* Network Segmentation
-* Layer 3 Routing
-* Virtual Networking
-* Proxmox Bridges
-* Security Zones
-
-## Issues Encountered
-
-### Windows Server No Internet
+### Inter-VLAN Communication Failure
 
 Symptoms:
 
 ```text
-Windows received IP but had no Internet access
+Kali Linux could not communicate with devices on the LAB network.
+```
+
+Investigation:
+
+* Verified IP addressing.
+* Verified subnet masks.
+* Verified pfSense interface assignments.
+
+Resolution:
+
+* Reviewed firewall rules between interfaces.
+* Confirmed routing through pfSense.
+* Adjusted allow/block policies.
+
+### DHCP Not Assigning Addresses on OPT1
+
+Symptoms:
+
+```text
+Devices connected to OPT1 received no IP address.
 ```
 
 Resolution:
 
-* Verified gateway
-* Verified DHCP
-* Corrected virtual NIC configuration
+* Enabled DHCP Server on OPT1.
+* Configured correct subnet range.
+* Renewed client leases.
+
+## Additional Skills Learned
+
+* Inter-VLAN Routing
+* Gateway Configuration
+* DHCP Scope Management
+* Network Isolation Design
+* Security Zone Architecture
 
 ---
 
-# Phase 4 – Suricata IDS Deployment
+# Phase 4 – OpenVPN Remote Access
 
 ## Objective
 
-Deploy Intrusion Detection System using Suricata.
+Implement secure remote access to the homelab environment using OpenVPN.
 
 ## Tasks Performed
 
-* Installed Suricata Package
-* Assigned Suricata to OPT1
-* Downloaded ET Open Rules
-* Enabled Rule Categories
-* Verified Alert Generation
+* Created Internal Certificate Authority
+* Generated Server Certificate
+* Generated User Certificate
+* Configured OpenVPN Server
+* Configured WAN Firewall Rules
+* Configured OpenVPN Firewall Rules
+* Configured TP-Link Port Forwarding
 
-## Skills Learned
+## Verification
 
-* IDS Concepts
-* Signature-Based Detection
-* Threat Intelligence Feeds
-* Rule Categories
-* Traffic Inspection
+Verified:
+
+✓ OpenVPN Service Running
+
+✓ Certificate Authentication Working
+
+✓ Firewall Rules Applied
+
+✓ Port Forwarding Configured
 
 ## Issues Encountered
 
-### Missing Beginner Feed
+### VPN Connection Timeout
+
+Symptoms:
+
+```text
+VPN client unable to establish connection from mobile data.
+```
+
+Investigation:
+
+* Verified OpenVPN service status.
+* Verified firewall rules.
+* Verified TP-Link port forwarding.
+* Verified certificates.
 
 Resolution:
 
-Learned newer versions use ET Open categories instead of beginner feeds.
+Discovered ISP assigned a private WAN address:
+
+```text
+10.10.10.x
+```
+
+Identified Carrier Grade NAT (CGNAT) preventing inbound VPN connectivity.
+
+## Skills Learned
+
+* Public Key Infrastructure (PKI)
+* Certificate Management
+* TLS Authentication
+* Remote Access VPN
+* Port Forwarding
+* NAT Concepts
+* Double NAT Troubleshooting
+* CGNAT Identification
+* Network Path Analysis
+
+## Outcome
+
+Successfully deployed OpenVPN infrastructure and identified ISP-level limitations preventing external connectivity.
 
 ---
 
