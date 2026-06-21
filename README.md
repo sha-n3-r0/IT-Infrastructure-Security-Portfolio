@@ -152,7 +152,7 @@ homelab-project/
 
 #### Service Desk & Infrastructure Support
 
-*June 2025 – April 2026*
+*February 2026 – April 2026*
 
 * Provided technical support for hardware, software, and network-related issues.
 * Assisted in workstation deployment and system optimization.
@@ -165,7 +165,7 @@ homelab-project/
 
 #### Social Media Management
 
-*February 2026 – April 2026*
+*June 2025 – April 2026*
 
 * Managed social media content planning and publishing.
 * Created digital assets using Canva.
