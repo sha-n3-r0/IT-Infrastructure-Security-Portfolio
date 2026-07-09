@@ -185,3 +185,67 @@ This ticket taught me the importance of checking the central print server when m
 ## Base Action
 
 First, I investigated the root cause of the problem to determine why none of the office printers were working. After checking the print server, I found that the print service was degraded, which caused all printers to appear offline. I immediately rebooted the print server, and once it came back online, I confirmed that the printers were working normally again.
+
+## Ticket 4 Objective
+Correct the user's system time and time zone to restore accurate meeting schedules and file timestamps.
+
+---
+
+## Tasks Performed
+- Connected to the user's computer remotely.
+- Checked the system date, time, and time zone settings.
+- Identified that the computer was configured to the wrong time zone.
+- Changed the time zone from Eastern Time to the correct Central Time zone.
+- Checked for pending Windows system updates.
+- Installed the available system updates.
+- Verified that the system time synchronized correctly.
+- Confirmed that Team Chat meetings and file timestamps displayed the correct time.
+
+---
+
+## Root Cause
+
+### Incorrect Time Zone Configuration
+
+**Cause:**
+- The computer was configured to the wrong time zone, causing incorrect meeting schedules and file timestamps.
+- The system also had pending updates that could affect time synchronization.
+
+---
+
+## Skills Learned
+- Remote Desktop Support
+- Windows Date and Time Configuration
+- Time Zone Troubleshooting
+- Windows Update Management
+- System Time Synchronization
+- User Support
+
+---
+
+## Issues Encountered
+
+### Incorrect System Time
+
+**Symptoms:**
+- Computer was set to Eastern Time instead of Central Time.
+- System clock was a few minutes behind.
+- Team Chat meetings appeared at the wrong times.
+- File timestamps were incorrect.
+
+**Resolution:**
+- Connected to the user's computer remotely.
+- Corrected the system time zone to Central Time.
+- Checked for pending Windows updates and installed them.
+- Verified that the system time synchronized correctly.
+- Confirmed that meeting schedules and file timestamps were accurate.
+
+---
+
+## Learning Reflection
+
+This ticket helped me understand the importance of verifying both the system time zone and Windows updates when troubleshooting time-related issues. I learned that an incorrect time zone can affect meetings, file timestamps, and other system functions. By correcting the time zone and installing pending updates, I was able to restore the system to the correct time and resolve the user's issue.
+
+## Base Action
+
+I remotely connected to the user's computer and checked the desktop's time zone settings. I corrected the time zone to the correct one and verified that the system time was accurate. I also checked for pending system updates and found that the desktop was not up to date, so I installed the available updates to ensure the system was running properly.
