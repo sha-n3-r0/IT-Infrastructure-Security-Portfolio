@@ -62,4 +62,4 @@ This ticket reinforced the importance of checking VPN connectivity when remote u
 
 ## Base Action
 
-First Action that  I make is to connect to the user remotely and perform a analysis what is the root cause of the problem, I find out that the vpn is disconnected and the file server of the user is un routed, I check on existing documentation and check the correct path of the marketing file server after that it is finished my learning was still grasping to the workflow but I know that I will go with this smoothly in no time.
+First, I connected to the user remotely and performed an analysis to determine the root cause of the problem. I found that the VPN was disconnected, and the user's file server was unreachable. I checked the existing documentation to verify the correct path for the Marketing file server. After resolving the issue, I realized that I am still grasping the workflow, but I know I will become more comfortable and efficient with it in no time.
