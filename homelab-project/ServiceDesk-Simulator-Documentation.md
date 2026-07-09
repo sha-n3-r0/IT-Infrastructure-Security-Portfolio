@@ -125,3 +125,63 @@ The first procedure I performed was to verify the user's identity because passwo
 ## Base Action
 
 First, I verified the employee's identity by asking for her details because password resets require careful verification. She informed me that her password had expired. Before resetting it, I sent a verification code to her registered contact and asked her to send it back to confirm her identity. After the verification was completed, I provided her with a temporary password so she could log in and create a new password.
+
+## Ticket 3 Objective
+Identify the cause of the office-wide printer outage and restore printing services for all users.
+
+---
+
+## Tasks Performed
+- Investigated the reported issue to determine the root cause.
+- Verified that all office printers were showing as offline.
+- Checked the status of the print server.
+- Identified that the print server service was degraded.
+- Rebooted the print server.
+- Verified that the print services were restored.
+- Confirmed that users were able to print successfully.
+
+---
+
+## Root Cause
+
+### Print Server Service Degraded
+
+**Cause:**
+- The print server service became degraded, causing all network printers to appear offline and preventing users from printing.
+
+---
+
+## Skills Learned
+- Print Server Troubleshooting
+- Root Cause Analysis
+- Windows Server Administration
+- Network Printing
+- Service Recovery
+- Incident Resolution
+
+---
+
+## Issues Encountered
+
+### All Office Printers Offline
+
+**Symptoms:**
+- All printers across the office appeared offline.
+- Print jobs were not processed.
+- Users from multiple floors experienced the same issue.
+
+**Resolution:**
+- Investigated the issue and identified the print server as the source of the problem.
+- Found that the print server service was degraded.
+- Rebooted the print server to restore the service.
+- Confirmed that the printers came back online and users were able to print normally.
+
+---
+
+## Learning Reflection
+
+This ticket taught me the importance of checking the central print server when multiple users report printer issues. Instead of troubleshooting individual printers, I focused on identifying the root cause, which was a degraded print server. Rebooting the server restored the printing service for the entire office. This experience improved my understanding of centralized print management and efficient troubleshooting.
+
+## Base Action
+
+First, I investigated the root cause of the problem to determine why none of the office printers were working. After checking the print server, I found that the print service was degraded, which caused all printers to appear offline. I immediately rebooted the print server, and once it came back online, I confirmed that the printers were working normally again.
