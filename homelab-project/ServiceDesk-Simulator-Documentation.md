@@ -249,3 +249,67 @@ This ticket helped me understand the importance of verifying both the system tim
 ## Base Action
 
 I remotely connected to the user's computer and checked the desktop's time zone settings. I corrected the time zone to the correct one and verified that the system time was accurate. I also checked for pending system updates and found that the desktop was not up to date, so I installed the available updates to ensure the system was running properly.
+
+## Ticket 5 Objective
+Restore the user's second monitor by identifying and resolving the cause of the display issue.
+
+---
+
+## Tasks Performed
+- Reviewed the troubleshooting steps already performed by the user.
+- Connected to the user's computer remotely.
+- Checked the display settings and system status.
+- Initially suspected that the display cable needed to be replaced.
+- Determined that the issue was caused by pending system updates.
+- Installed the required Windows updates.
+- Restarted the computer.
+- Verified that the second monitor was detected and functioning correctly.
+- Informed the user that the issue had been resolved.
+
+---
+
+## Root Cause
+
+### Pending System Updates
+
+**Cause:**
+- The computer had pending system updates that affected the display functionality.
+- After installing the updates and restarting the computer, the second monitor was detected normally.
+
+---
+
+## Skills Learned
+- Remote Desktop Support
+- Multi-Monitor Troubleshooting
+- Windows Update Management
+- Display Configuration
+- Root Cause Analysis
+- User Communication
+
+---
+
+## Issues Encountered
+
+### Second Monitor Not Detected
+
+**Symptoms:**
+- Monitor displayed **"No Signal."**
+- Computer did not detect the second monitor.
+- Monitor functioned correctly when tested on another laptop.
+
+**Resolution:**
+- Reviewed the user's troubleshooting steps.
+- Checked the computer for pending system updates.
+- Installed the updates and restarted the computer.
+- Confirmed that the second monitor was detected and working properly.
+- Notified the user that the issue had been resolved.
+
+---
+
+## Learning Reflection
+
+At first, I assumed the issue was caused by a faulty display cable and considered replacing it. However, after reviewing the ticket more carefully, I found that the problem was resolved by installing the pending system updates and restarting the computer. This experience taught me the importance of reviewing all available information before making assumptions and following a structured troubleshooting process.
+
+## Base Action
+
+My first assumption was to replace the display cable, but I realized that I had misread the ticket. The issue only required a system update. After installing the update and restarting the computer, the monitor worked fine. I then informed Amanda Foster that the issue had been resolved and that the monitor was ready to use.
