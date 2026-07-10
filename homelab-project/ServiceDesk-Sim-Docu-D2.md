@@ -161,3 +161,61 @@ This ticket helped me understand how to troubleshoot email issues that are isola
 ## Base Action
 
 First, I contacted the user to gather more information about the issue. I confirmed that the work email was functioning correctly on both the user's laptop and webmail, indicating that the problem was isolated to the mobile device. I instructed the user to remove and reinstall the mobile email account, then sign in again. After completing these steps, the user confirmed that the email was working successfully on their phone.
+
+
+# Day 2 Ticket: Accidentally Deleted Important Files and Emptied the Recycle Bin
+
+## Ticket Objective
+Recover accidentally deleted files after the user emptied the Recycle Bin.
+
+## Tasks Performed
+- Connected to the user's computer remotely.
+- Verified the details of the deleted files and confirmed when the deletion occurred.
+- Checked that the Recycle Bin was empty.
+- Verified that cloud synchronization was enabled on the user's computer.
+- Accessed the cloud storage service and located the deleted files.
+- Restored the deleted folder from the cloud recycle bin/version history.
+- Confirmed that the recovered files were successfully synchronized back to the user's computer.
+- Verified that the user could access the restored files.
+
+## Root Cause
+
+### Accidental File Deletion
+
+**Cause:**
+
+The user accidentally deleted an important folder and emptied the Recycle Bin. Fortunately, the files had been synchronized with the company's cloud storage, allowing them to be recovered from the cloud recycle bin.
+
+## Skills Learned
+- Remote Desktop Support
+- File Recovery
+- Cloud Storage Synchronization
+- Data Restoration
+- User Support
+- Root Cause Analysis
+
+## Issues Encountered
+
+### Accidentally Deleted Important Files
+
+**Symptoms:**
+- The user accidentally deleted an important folder.
+- The Recycle Bin had already been emptied.
+- The files contained months of client proposals and contracts.
+- Immediate recovery was required to prevent data loss.
+
+**Resolution:**
+- Connected to the user's computer remotely.
+- Verified that cloud synchronization was enabled.
+- Accessed the cloud storage service.
+- Restored the deleted files from the cloud recycle bin.
+- Confirmed that the files synchronized successfully back to the user's computer.
+- Verified that the user could access the recovered files.
+
+## Learning Reflection
+
+This ticket helped me understand the importance of cloud synchronization as a backup and recovery solution. I learned how to verify whether files are synchronized and how to restore deleted data from cloud storage when the local Recycle Bin is no longer available. This experience improved my confidence in handling accidental file deletion incidents.
+
+## Base Action
+
+First, I connected to the user's computer remotely and verified the details of the deleted files. After confirming that the Recycle Bin was empty, I checked that cloud synchronization was enabled. I restored the deleted folder from the cloud storage recycle bin, verified that the files synchronized successfully back to the user's computer, and confirmed that the user could access the recovered files.
