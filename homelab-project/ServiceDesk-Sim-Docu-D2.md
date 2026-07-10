@@ -46,3 +46,60 @@ This ticket helped me understand the user onboarding process and the importance 
 ## Base Action
 
 First, I reviewed the new hire request and verified the employee's information. I created Jennifer Torres' directory account using the username **jtorres** and assigned the required group memberships, including **Engineering**, **VPN-Users**, and **CodeRepo-Access**. Finally, I verified that the account and permissions were configured successfully to ensure the employee would have access before the scheduled start date and be ready for orientation at 9:00 AM on Monday.
+
+# Day 2 Ticket: WiFi Not Working for Single User
+
+## Ticket Objective
+Diagnose and resolve a user's inability to connect to the office WiFi while other users remained unaffected.
+
+## Tasks Performed
+- Connected to the user's computer remotely.
+- Performed initial troubleshooting to identify the root cause of the issue.
+- Verified the user's network settings and WiFi status.
+- Performed a DNS flush to clear cached network information.
+- Forgot and re-added the office WiFi network profile.
+- Verified the correct WiFi password using the existing documentation.
+- Reconnected the laptop to the office WiFi.
+- Confirmed that the user regained network access and could access company resources.
+
+## Root Cause
+
+### Incorrect or Corrupted WiFi Profile
+
+**Cause:**
+
+The user's laptop had an incorrect or corrupted saved WiFi profile, preventing it from authenticating with the wireless network. Since other users were able to connect successfully, the issue was isolated to the user's device.
+
+## Skills Learned
+- Remote Desktop Support
+- WiFi Troubleshooting
+- DNS Troubleshooting
+- Wireless Network Configuration
+- Documentation Review
+- Root Cause Analysis
+
+## Issues Encountered
+
+### Unable to Connect to Office WiFi
+
+**Symptoms:**
+- Laptop could not connect to the office WiFi.
+- Internet access was unavailable.
+- Other users on the same floor were connected successfully.
+- User relied on a mobile hotspot as a temporary workaround.
+
+**Resolution:**
+- Connected to the user's computer remotely.
+- Performed a DNS flush.
+- Removed the saved WiFi profile.
+- Verified the correct WiFi password using internal documentation.
+- Reconnected the laptop to the office WiFi.
+- Confirmed that the user could successfully access the network and company resources.
+
+## Learning Reflection
+
+This ticket helped me understand how to troubleshoot WiFi issues that affect only a single user. I learned the importance of verifying saved wireless profiles, checking documentation for the correct network credentials, and confirming connectivity after making changes. This experience improved my confidence in resolving common wireless connectivity problems.
+
+## Base Action
+
+First, I connected to the user's computer remotely and performed an analysis to determine the root cause of the issue. I performed a DNS flush, removed the saved WiFi network profile, and verified the correct WiFi password using the existing documentation. After reconnecting the laptop to the office WiFi, I confirmed that the user had successfully regained network access and could access company resources.
