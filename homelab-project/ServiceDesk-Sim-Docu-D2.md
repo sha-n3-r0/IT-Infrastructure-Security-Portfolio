@@ -103,3 +103,61 @@ This ticket helped me understand how to troubleshoot WiFi issues that affect onl
 ## Base Action
 
 First, I connected to the user's computer remotely and performed an analysis to determine the root cause of the issue. I performed a DNS flush, removed the saved WiFi network profile, and verified the correct WiFi password using the existing documentation. After reconnecting the laptop to the office WiFi, I confirmed that the user had successfully regained network access and could access company resources.
+
+# Day 2 Ticket: Cannot Access Email on Mobile Device
+
+## Ticket Objective
+Diagnose and resolve a user's inability to access their work email on a mobile device.
+
+## Tasks Performed
+- Connected with the user remotely to gather information about the issue.
+- Verified that the mobile device had a working internet connection.
+- Confirmed that the user's work email was accessible on their laptop.
+- Reviewed the mobile email account settings.
+- Removed and re-added the work email account on the mobile device.
+- Verified the server settings using the existing documentation.
+- Tested email synchronization.
+- Confirmed that the user was able to send and receive emails successfully.
+
+## Root Cause
+
+### Corrupted Mobile Email Account Configuration
+
+**Cause:**
+
+The mobile email account configuration had become corrupted, preventing the device from connecting to the mail server. Since email was working normally on the user's laptop, the issue was isolated to the mobile device.
+
+## Skills Learned
+- Mobile Device Support
+- Email Troubleshooting
+- Account Configuration
+- Documentation Review
+- Remote User Support
+- Root Cause Analysis
+
+## Issues Encountered
+
+### Unable to Access Work Email on Mobile Device
+
+**Symptoms:**
+- Error message: **"Cannot connect to server."**
+- Internet connection on the phone was working.
+- Other mobile applications had internet access.
+- Work email functioned normally on the user's laptop.
+
+**Resolution:**
+- Verified the device's internet connection.
+- Reviewed the email account configuration.
+- Removed and re-added the work email account.
+- Verified the correct mail server settings using internal documentation.
+- Confirmed that the mailbox synchronized successfully.
+- Verified that the user could send and receive work emails.
+
+## Learning Reflection
+
+This ticket helped me understand how to troubleshoot email issues that are isolated to a mobile device. I learned the importance of verifying connectivity, confirming whether the issue affects other devices, and validating account settings before recreating the email profile. This experience improved my confidence in supporting mobile email connectivity issues.
+
+
+## Base Action
+
+First, I contacted the user to gather more information about the issue. I confirmed that the work email was functioning correctly on both the user's laptop and webmail, indicating that the problem was isolated to the mobile device. I instructed the user to remove and reinstall the mobile email account, then sign in again. After completing these steps, the user confirmed that the email was working successfully on their phone.
