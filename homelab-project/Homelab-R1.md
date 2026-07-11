@@ -1,5 +1,3 @@
----
-
 # Current Project Status
 
 ## Completed
