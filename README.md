@@ -2,75 +2,83 @@
 
 ## Shanner Aldous G. Orcasitas
 
-📍 Cabuyao City, Laguna, Philippines
-📧 [orcasitas.shanneraldous32@gmail.com](mailto:orcasitas.shanneraldous32@gmail.com)
+📍 Cabuyao City, Laguna, Philippines  
+📧 orcasitas.shanneraldous32@gmail.com  
 📞 +63 916 303 5358
 
 ---
 
-## Professional Summary
+# Professional Summary
 
-Information Technology graduate with practical experience in IT Support, Systems Administration, Networking, and Cybersecurity. Experienced in troubleshooting hardware and software issues, supporting end users, managing virtualized environments, configuring network services, and implementing security solutions in both professional and homelab environments.
+Information Technology graduate with practical experience in IT Support, Systems Administration, Networking, and Cybersecurity. Experienced in troubleshooting hardware and software issues, supporting end users, managing virtualized environments, configuring Windows and Linux servers, implementing enterprise networking solutions, and securing infrastructure through hands-on homelab projects.
 
-My experience includes virtualization using Proxmox VE, network administration with pfSense, VPN deployment, network segmentation, firewall management, intrusion detection systems, and security monitoring. I am passionate about building secure and reliable infrastructure while continuously expanding my technical knowledge.
-
----
-
-## Technical Skills
-
-### Systems Administration
-
-* Proxmox VE
-* Windows Server 2022
-* Ubuntu Server
-* Active Directory Fundamentals
-* User & Group Management
-* Virtual Machine Deployment
-* Server Maintenance
-
-### Networking
-
-* TCP/IP
-* DNS
-* DHCP
-* Static DHCP Reservations
-* NAT
-* VLAN Fundamentals
-* LAN/WAN Connectivity
-* Network Troubleshooting
-* VPN Technologies
-
-### Cybersecurity
-
-* pfSense Firewall Administration
-* OpenVPN
-* Suricata IDS/IPS
-* pfBlockerNG
-* Security Monitoring
-* Alert Analysis
-* Vulnerability Assessment
-* Nmap
-
-### IT Support
-
-* Hardware Troubleshooting
-* Software Troubleshooting
-* End-User Support
-* Incident Documentation
-* System Deployment
-* Technical Documentation
-
-### Development
-
-* Laravel
-* React
-* MySQL
-* Git & GitHub
-* HTML, CSS, JavaScript
+My experience includes virtualization using Proxmox VE, Windows Server administration, Active Directory Domain Services, network segmentation, pfSense firewall management, VPN deployment, intrusion detection systems, security monitoring, and enterprise workstation management. I enjoy designing secure and scalable infrastructure while continuously expanding my knowledge in systems administration and cybersecurity.
 
 ---
 
-## Homelab Architecture
+# Technical Skills
+
+## Systems Administration
+
+- Proxmox VE
+- Windows Server 2022
+- Windows 11 Administration
+- Ubuntu Server
+- Active Directory Domain Services (AD DS)
+- Active Directory Users & Computers
+- Domain Join
+- DNS Server
+- User & Group Management
+- Virtual Machine Deployment
+- Server Administration
+- System Maintenance
+
+## Networking
+
+- TCP/IP
+- DNS
+- DHCP
+- Static DHCP Reservations
+- NAT
+- VLAN Fundamentals
+- LAN/WAN Connectivity
+- Network Segmentation
+- VPN Technologies
+- Network Troubleshooting
+
+## Cybersecurity
+
+- pfSense Firewall
+- OpenVPN
+- Suricata IDS/IPS
+- pfBlockerNG
+- Security Monitoring
+- Alert Analysis
+- Vulnerability Assessment
+- Nmap
+
+## IT Support
+
+- Hardware Troubleshooting
+- Software Troubleshooting
+- Windows Deployment
+- End-User Support
+- Incident Documentation
+- Technical Documentation
+
+## Development
+
+- Laravel
+- React
+- MySQL
+- Git & GitHub
+- HTML
+- CSS
+- JavaScript
+
+---
+
+# Homelab Architecture
 
 ```text
                      Internet
@@ -86,122 +94,216 @@ My experience includes virtualization using Proxmox VE, network administration w
         ▼                                 ▼
 
  Main LAN                          Lab Network
- 192.168.10.0/24                   192.168.20.0/24
+192.168.10.0/24                  192.168.20.0/24
 
- Gateway: 192.168.10.1             Gateway: 192.168.20.1
+Gateway: 192.168.10.1            Gateway: 192.168.20.1
 
- ├── Kali Linux                    ├── Ubuntu Server
- └── TrueNAS                       └── Windows Server 2022
-```
-
-### Virtual Machines
-
-* pfSense
-* Ubuntu Server
-* Windows Server 2022
-* Kali Linux
-* TrueNAS
-
----
-
-## Featured Project
-
-### Enterprise Security Homelab
-
-A hands-on infrastructure, networking, and cybersecurity project built using Proxmox VE, pfSense, Windows Server 2022, Ubuntu Server, Kali Linux, and TrueNAS.
-
-The project was designed to develop practical experience in systems administration, network security, virtualization, monitoring, and security operations.
-
-### Technologies Used
-
-* Proxmox VE
-* pfSense
-* OpenVPN
-* Suricata IDS
-* pfBlockerNG
-* Windows Server 2022
-* Ubuntu Server
-* Kali Linux
-* TrueNAS
-* Nmap
-
-### Project Coverage
-
-* Static DHCP Reservations
-* Firewall Rule Configuration
-* Network Segmentation
-* OpenVPN Deployment
-* pfBlockerNG Configuration
-* Suricata IDS Deployment
-* Security Alert Analysis
-* Nmap Security Testing
-
-📖 **Full Project Documentation**
-
-```text
-homelab-project/
-└── roadmap-1/
-    └── README.md
+├── Kali Linux                   ├── Ubuntu Server
+├── TrueNAS                      ├── Windows Server 2022
+                                 └── Windows 11 Pro (Domain Joined)
 ```
 
 ---
 
-## Professional Experience
+# Virtual Machines
 
-### Sundia Group
-
-#### Service Desk & Infrastructure Support
-
-*February 2026 – April 2026*
-
-* Provided technical support for hardware, software, and network-related issues.
-* Assisted in workstation deployment and system optimization.
-* Supported LAN/WAN connectivity and IP configuration.
-* Monitored server connectivity and infrastructure operations.
-* Maintained technical documentation and support records.
-* Assisted in website development using Laravel and React.
-
-### LionHearTV / PH Entertainment
-
-#### Social Media Management
-
-*June 2025 – April 2026*
-
-* Managed social media content planning and publishing.
-* Created digital assets using Canva.
-* Conducted content research and trend analysis.
-* Maintained consistent brand communication.
+- pfSense Firewall
+- Windows Server 2022 (Domain Controller)
+- Windows 11 Pro (Domain Joined Client)
+- Ubuntu Server
+- Kali Linux
+- TrueNAS
 
 ---
 
-## Certifications & Training
+# Featured Project
 
-* Microsoft Office Certification
-* Cisco Networking Basics
-* Vulnerability Scanning with Nmap
-* Security Awareness Campaigns
-* Creative Web Design NC III
-* Visual Graphic Design NC III
-* Cybersecurity – UMAK IT Olympic
-* HP Seminar
+## Enterprise Infrastructure & Security Homelab
 
----
+A hands-on enterprise infrastructure project built using Proxmox VE to simulate a real corporate IT environment.
 
-## Career Interests
+The homelab focuses on systems administration, enterprise networking, virtualization, Active Directory, cybersecurity, and security operations.
 
-I am currently interested in opportunities related to:
-
-* IT Support Specialist
-* Service Desk Analyst
-* Network Support Technician
-* Junior System Administrator
-* NOC Analyst
-* SOC Analyst (Tier 1)
-* Cybersecurity Analyst
+The environment includes multiple virtual machines connected through pfSense, allowing realistic implementation of Windows Server services, enterprise identity management, network segmentation, VPN connectivity, and intrusion detection.
 
 ---
 
-## Repository Structure
+## Technologies Used
+
+- Proxmox VE
+- Windows Server 2022
+- Windows 11 Pro
+- Active Directory Domain Services
+- DNS
+- DHCP
+- pfSense
+- OpenVPN
+- Suricata IDS/IPS
+- pfBlockerNG
+- Ubuntu Server
+- Kali Linux
+- TrueNAS
+- Nmap
+
+---
+
+# Project Coverage
+
+### Infrastructure
+
+- Virtualization using Proxmox VE
+- Virtual Machine Deployment
+- Windows Server Administration
+- Windows 11 Client Deployment
+- Ubuntu Server Administration
+- Enterprise Lab Design
+
+### Networking
+
+- Static DHCP Reservations
+- Firewall Rule Configuration
+- Network Segmentation
+- DNS Configuration
+- DHCP Configuration
+- OpenVPN Deployment
+
+### Windows Server
+
+- Active Directory Domain Services
+- Domain Controller Deployment
+- Domain Creation
+- Windows 11 Domain Join
+- Active Directory Users & Computers
+
+### Cybersecurity
+
+- pfSense Firewall Administration
+- Suricata IDS Deployment
+- Suricata IPS Configuration
+- pfBlockerNG
+- Alert Analysis
+- Nmap Security Testing
+
+---
+
+# Homelab Roadmap
+
+## Phase 1
+
+- Static DHCP Reservations
+
+## Phase 2
+
+- Firewall Rules
+
+## Phase 3
+
+- Network Segmentation
+
+## Phase 4
+
+- OpenVPN Remote Access
+
+## Phase 5
+
+- Nmap Security Testing
+
+## Phase 6
+
+- Suricata Alert Analysis
+
+## Phase 7
+
+- Suricata IPS Configuration
+
+## Phase 8
+
+- Windows Server Installation
+- Active Directory Domain Services
+- Domain Controller Promotion
+- Domain Creation (shanero.com)
+- Windows 11 Pro Deployment
+- Windows 11 Domain Join
+- Active Directory Computer Management
+
+---
+
+# Featured Learning Experience
+
+One of the biggest challenges during this project was implementing Active Directory inside a Proxmox environment instead of following a traditional VirtualBox-based tutorial.
+
+Most learning resources demonstrated the deployment using Oracle VirtualBox, while my homelab already had a fully customized network architecture consisting of pfSense, multiple subnets, Windows Server, Ubuntu Server, Kali Linux, and TrueNAS.
+
+Rather than rebuilding my environment to match the tutorial, I adapted every step to fit my existing infrastructure.
+
+This required additional troubleshooting involving networking, DNS configuration, Windows virtual machine optimization, and Proxmox VirtIO drivers.
+
+Successfully joining the Windows 11 workstation to my **shanero.com** domain and seeing it appear inside **Active Directory Users and Computers** was one of the most rewarding milestones of the project.
+
+This experience strengthened not only my Windows Server administration skills but also my ability to troubleshoot unfamiliar environments and apply concepts beyond step-by-step tutorials.
+
+---
+
+# Professional Experience
+
+## Sundia Group
+
+### Service Desk & Infrastructure Support
+
+**February 2026 – April 2026**
+
+- Provided technical support for hardware, software, and networking issues.
+- Assisted in workstation deployment and maintenance.
+- Supported LAN/WAN connectivity.
+- Configured IP addressing and basic network troubleshooting.
+- Monitored infrastructure availability.
+- Created technical documentation.
+- Assisted with web application development using Laravel and React.
+
+---
+
+## LionHearTV / PH Entertainment
+
+### Social Media Management
+
+**June 2025 – April 2026**
+
+- Managed social media publishing schedules.
+- Designed digital content using Canva.
+- Conducted content research and trend monitoring.
+- Maintained brand consistency across platforms.
+
+---
+
+# Certifications & Training
+
+- Microsoft Office Certification
+- Cisco Networking Basics
+- Vulnerability Scanning with Nmap
+- Security Awareness Campaigns
+- Creative Web Design NC III
+- Visual Graphic Design NC III
+- Cybersecurity – UMAK IT Olympic
+- HP Seminar
+
+---
+
+# Career Interests
+
+I am currently seeking opportunities in:
+
+- IT Support Specialist
+- Service Desk Analyst
+- Network Support Technician
+- Junior Systems Administrator
+- Windows Server Administrator
+- NOC Analyst
+- SOC Analyst (Tier 1)
+- Cybersecurity Analyst
+
+---
+
+# Repository Structure
 
 ```text
 IT-Infrastructure-Security-Portfolio
@@ -209,8 +311,13 @@ IT-Infrastructure-Security-Portfolio
 ├── README.md
 │
 ├── homelab-project
-│   └── roadmap-1
-│       └── README.md
+│   ├── roadmap-1
+│   │   └── README.md
+│   │
+│   ├── roadmap-2
+│   │   └── Active-Directory.md
+│   │
+│   └── images
 │
 ├── networking-practices
 │
@@ -219,14 +326,14 @@ IT-Infrastructure-Security-Portfolio
 
 ---
 
-## Contact Information
+# Contact Information
 
-📧 Email: [orcasitas.shanneraldous32@gmail.com](mailto:orcasitas.shanneraldous32@gmail.com)
+📧 **Email:** orcasitas.shanneraldous32@gmail.com
 
-📞 Mobile: +63 916 303 5358
+📞 **Mobile:** +63 916 303 5358
 
-📍 Location: Cabuyao City, Laguna, Philippines
+📍 **Location:** Cabuyao City, Laguna, Philippines
 
 ---
 
-> Thank you for visiting my portfolio. This repository showcases my hands-on experience in IT Infrastructure, Networking, Systems Administration, and Cybersecurity through practical projects, documentation, and real-world lab implementations.
+> Thank you for visiting my portfolio. This repository showcases my hands-on experience in enterprise infrastructure, Windows Server administration, networking, virtualization, Active Directory, and cybersecurity through practical projects, documentation, and real-world homelab implementations built using Proxmox VE.
