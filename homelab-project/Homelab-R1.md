@@ -1,567 +1,3 @@
-# Homelab Security & Networking Journey Documentation
-
-## Project Overview
-
-This project was created to gain hands-on experience in networking, firewall administration, network segmentation, intrusion detection, intrusion prevention, VPN technologies, and cybersecurity operations using a virtualized homelab environment.
-
----
-
-## Infrastructure
-
-```text
-Proxmox VE
-├── pfSense Firewall
-├── Kali Linux
-├── Ubuntu Server
-├── Windows Server 2022
-└── TrueNAS
-```
-
-### Network Architecture
-
-```text
-Internet
-    ↓
-ISP Router
-    ↓
-pfSense
-├── LAN (192.168.10.0/24)
-│   ├── Kali Linux
-│   └── TrueNAS
-│
-└── OPT1 / LAB (192.168.20.0/24)
-    ├── Ubuntu Server
-    └── Windows Server 2022
-```
-
----
-
-# Phase 1 – Static DHCP Mappings
-
-## Objective
-
-Assign permanent IP addresses to critical devices using DHCP reservations.
-
-## Tasks Performed
-
-* Configured DHCP Static Mappings in pfSense
-* Reserved IP addresses based on MAC addresses
-* Verified devices received correct addresses
-
-### Reserved Devices
-
-| Device              | IP Address    |
-| ------------------- | ------------- |
-| Kali Linux          | 192.168.10.30 |
-| Ubuntu Server       | 192.168.20.10 |
-| Windows Server 2022 | 192.168.20.11 |
-| TrueNAS             | 192.168.10.40 |
-
-## Skills Learned
-
-* DHCP Fundamentals
-* DHCP Reservations
-* MAC Address Identification
-* IP Address Management
-* Network Inventory Management
-
-## Issues Encountered
-
-### Dynamic IP Assignment
-
-Symptoms:
-
-```text
-Devices received different IP addresses after reboot.
-```
-
-Resolution:
-
-* Configured DHCP Static Mappings
-* Verified MAC addresses
-* Renewed DHCP leases
-
----
-
-# Phase 2 – Firewall Rules
-
-## Objective
-
-Understand how pfSense processes and enforces firewall rules.
-
-## Tasks Performed
-
-* Created Allow Rules
-* Created Block Rules
-* Tested Internet Restrictions
-* Tested Source-Based Filtering
-
-### Example Rule
-
-```text
-Block Ubuntu Internet Access
-
-Source:
-192.168.20.10
-
-Destination:
-Any
-
-Action:
-Block
-```
-
-## Skills Learned
-
-* Firewall Rule Processing
-* Stateful Firewalls
-* Rule Ordering
-* Traffic Filtering
-* Access Control
-
-## Issues Encountered
-
-### Rule Not Working
-
-Symptoms:
-
-```text
-Traffic continued despite block rule.
-```
-
-Resolution:
-
-* Learned "First Match Wins" principle
-* Adjusted rule order
-* Re-tested connectivity
-
----
-
-# Phase 3 – Network Segmentation
-
-## Objective
-
-Separate devices into security zones using pfSense and Proxmox networking.
-
-## Tasks Performed
-
-### Created New Network
-
-```text
-vmbr2
-```
-
-### Added New pfSense Interface
-
-```text
-OPT1
-```
-
-### Assigned Devices
-
-```text
-Ubuntu Server
-Windows Server 2022
-```
-
-to:
-
-```text
-192.168.20.0/24
-```
-
-### Enabled DHCP on OPT1
-
-Configured:
-
-```text
-192.168.20.100 – 192.168.20.199
-```
-
-## Skills Learned
-
-* Network Segmentation
-* Security Zones
-* Inter-Network Routing
-* Virtual Switching
-* Gateway Configuration
-* DHCP Scope Management
-
-## Issues Encountered
-
-### Inter-Network Connectivity Failure
-
-Symptoms:
-
-```text
-Kali could not communicate with LAB devices.
-```
-
-Resolution:
-
-* Verified routing
-* Verified firewall rules
-* Adjusted OPT1 policies
-
-### No Internet on LAB Devices
-
-Symptoms:
-
-```text
-Windows Server received IP address but had no Internet access.
-```
-
-Resolution:
-
-* Created OPT1 Allow Rule
-* Enabled outbound communication
-* Verified gateway configuration
-
----
-
-# Phase 4 – OpenVPN Remote Access (Partially Completed)
-
-## Objective
-
-Implement secure remote access to the homelab using OpenVPN.
-
-## Tasks Performed
-
-### Certificate Infrastructure
-
-Created:
-
-```text
-HomeVPN_CA
-```
-
-Created:
-
-```text
-OpenVPN Server Certificate
-```
-
-Created:
-
-```text
-VPN User Certificate
-```
-
-### OpenVPN Server Configuration
-
-Configured:
-
-```text
-Protocol: UDP
-Port: 1194
-Tunnel Network: 10.8.0.0/24
-```
-
-### Firewall Configuration
-
-Created:
-
-```text
-Allow UDP 1194
-```
-
-### Router Configuration
-
-Configured TP-Link Port Forwarding:
-
-```text
-UDP 1194
-→
-pfSense WAN IP
-```
-
-## Skills Learned
-
-* OpenVPN Deployment
-* Certificate-Based Authentication
-* PKI Concepts
-* TLS Encryption
-* Port Forwarding
-* Remote Access Design
-* VPN Troubleshooting
-
-## Issues Encountered
-
-### Remote Testing Not Completed
-
-Reason:
-
-```text
-Mobile Data Testing Not Available
-```
-
-### Potential CGNAT Investigation
-
-Observed:
-
-```text
-Private WAN addressing from ISP
-```
-
-Potential Impact:
-
-```text
-OpenVPN may be unreachable from the Internet.
-```
-
-## Current Status
-
-```text
-◐ PARTIALLY COMPLETED
-```
-
-Completed:
-
-* Certificate Creation
-* OpenVPN Server Configuration
-* Firewall Rules
-* Port Forwarding
-
-Pending:
-
-* Mobile Data Testing
-* External Connectivity Validation
-* CGNAT Verification
-
----
-
-# Phase 5 – Suricata IDS Deployment
-
-## Objective
-
-Deploy and configure an Intrusion Detection System using Suricata.
-
-## Tasks Performed
-
-* Installed Suricata Package
-* Enabled ET Open Rules
-* Configured WAN Monitoring
-* Configured OPT1 Monitoring
-* Downloaded and Updated Rule Sets
-* Verified Alert Generation
-
-## Skills Learned
-
-* IDS Concepts
-* Signature-Based Detection
-* Threat Intelligence Feeds
-* Traffic Inspection
-* Security Monitoring
-
-## Issues Encountered
-
-### Rule Category Confusion
-
-Symptoms:
-
-```text
-Expected beginner feeds were not available.
-```
-
-Resolution:
-
-Learned modern Suricata versions use ET Open rule categories.
-
----
-
-# Phase 6 – Nmap Testing
-
-## Objective
-
-Generate reconnaissance traffic for IDS testing.
-
-## Tests Performed
-
-### SYN Scan
-
-```bash
-nmap -sS 192.168.20.10
-```
-
-### Service Detection
-
-```bash
-nmap -sV 192.168.20.10
-```
-
-### OS Detection
-
-```bash
-nmap -O 192.168.20.10
-```
-
-### Aggressive Scan
-
-```bash
-nmap -A 192.168.20.10
-```
-
-### Network Sweep
-
-```bash
-nmap -Pn -sS 192.168.20.0/24
-```
-
-## Skills Learned
-
-* Host Discovery
-* Port Scanning
-* Service Enumeration
-* OS Fingerprinting
-* Reconnaissance Methodology
-
-## Issues Encountered
-
-### Scan Signatures Not Triggering
-
-Resolution:
-
-Verified Suricata functionality through other alerts and determined active scans did not match loaded signatures.
-
----
-
-# Phase 7 – Alert Analysis
-
-## Objective
-
-Learn SOC-style alert investigation and interpretation.
-
-## Sample Alerts
-
-### ICMP Alert
-
-```text
-SURICATA ICMPv4 Unknown Code
-```
-
-### TCP Alert
-
-```text
-SURICATA STREAM Excessive Retransmissions
-```
-
-## Analysis Workflow
-
-```text
-Alert
- ↓
-Source IP
- ↓
-Destination IP
- ↓
-Protocol
- ↓
-SID
- ↓
-Priority
- ↓
-Verdict
-```
-
-## Skills Learned
-
-* Alert Investigation
-* Source/Destination Analysis
-* SID Interpretation
-* Priority Analysis
-* Event Validation
-* False Positive Identification
-
-## Example Finding
-
-```text
-Source:
-192.168.20.11
-
-Alert:
-SURICATA STREAM Excessive Retransmissions
-
-Priority:
-3
-
-Verdict:
-Informational / Low Risk
-```
-
----
-
-# Phase 8 – IPS Configuration (Partially Completed)
-
-## Objective
-
-Convert IDS monitoring into active prevention.
-
-## Tasks Performed
-
-Enabled:
-
-```text
-Block Offenders
-```
-
-Configured:
-
-```text
-IPS Mode: Legacy
-Kill States: Enabled
-Block: BOTH
-```
-
-## Skills Learned
-
-* IDS vs IPS
-* Automated Blocking
-* Host Blocking
-* Stateful Session Termination
-* Prevention Concepts
-
-## Issues Encountered
-
-### No Block Events Generated
-
-Symptoms:
-
-```text
-Nmap scans did not trigger blocking actions.
-```
-
-Resolution:
-
-Confirmed:
-
-* Suricata Running
-* Alerts Generated
-* Traffic Inspected
-
-Conclusion:
-
-```text
-Rule tuning required.
-```
-
-## Current Status
-
-```text
-◐ PARTIALLY COMPLETED
-```
-
-Completed:
-
-* IPS Configuration
-* Block Offenders
-* Alert Verification
-
-Pending:
-
-* Successful Block Event
-* Rule Tuning
-* Block Validation Testing
-
 ---
 
 # Current Project Status
@@ -569,19 +5,27 @@ Pending:
 ## Completed
 
 ```text
-✓ Static DHCP Mappings
-✓ Firewall Rules
-✓ Network Segmentation
-✓ Suricata IDS Deployment
-✓ Nmap Testing
-✓ Alert Analysis
+✓ Phase 1 – Static DHCP Mappings
+✓ Phase 2 – Firewall Rules
+✓ Phase 3 – Network Segmentation
+✓ Phase 5 – Suricata IDS Deployment
+✓ Phase 6 – Network Security Testing (Nmap)
+✓ Phase 7 – Suricata Alert Analysis
 ```
 
 ## Partially Completed
 
 ```text
-◐ OpenVPN Remote Access
-◐ Suricata IPS Configuration
+◐ Phase 4 – OpenVPN Remote Access
+◐ Phase 8 – Suricata IPS Configuration
+```
+
+## Not Started
+
+```text
+□ Phase 9 – Windows Server Infrastructure
+□ Phase 10 – Wazuh SIEM
+□ Phase 11 – Enterprise Network Deployment
 ```
 
 ---
@@ -590,103 +34,220 @@ Pending:
 
 ## Networking
 
-* DHCP Administration
-* DHCP Reservations
-* Routing
-* NAT Concepts
-* Port Forwarding
-* Gateway Configuration
-* Network Segmentation
+- IPv4 Addressing
+- Network Address Planning
+- DHCP Administration
+- DHCP Reservations
+- Gateway Configuration
+- Routing Fundamentals
+- NAT Concepts
+- Port Forwarding
+- Network Segmentation
+- Inter-Network Routing
+- Security Zone Design
 
 ## Firewall Administration
 
-* pfSense Administration
-* Firewall Rule Management
-* Stateful Firewalls
-* Traffic Control
+- pfSense Installation
+- Interface Configuration
+- Firewall Rule Management
+- Stateful Firewall Concepts
+- Rule Processing Logic
+- Traffic Filtering
+- Access Control Design
 
 ## Virtualization
 
-* Proxmox Administration
-* Virtual Networking
-* Linux Bridges (vmbr)
-* Multi-Network Architecture
+- Proxmox VE Administration
+- Virtual Machine Deployment
+- Virtual Switch (Linux Bridge) Configuration
+- Multi-Network Architecture
+- Virtual Network Troubleshooting
 
 ## VPN Technologies
 
-* OpenVPN Deployment
-* Certificate Management
-* PKI Concepts
-* Remote Access Architecture
+- OpenVPN Deployment
+- Public Key Infrastructure (PKI)
+- Certificate Authority Management
+- Server & Client Certificate Creation
+- TLS Authentication
+- Remote Access VPN Design
+- VPN Connectivity Troubleshooting
 
-## Cybersecurity
+## Intrusion Detection & Prevention
 
-* IDS Deployment
-* IPS Fundamentals
-* Security Monitoring
-* Reconnaissance Techniques
-* Traffic Analysis
+- Suricata Installation
+- ET Open Rule Management
+- Signature-Based Detection
+- IDS Deployment
+- IPS Fundamentals
+- Traffic Inspection
+- Rule Updates and Management
+- Threat Monitoring
 
-## Security Operations
+## Security Operations (SOC)
 
-* Alert Investigation
-* Event Analysis
-* False Positive Identification
-* Security Monitoring Workflows
+- Network Reconnaissance using Nmap
+- Alert Investigation
+- SID Analysis
+- Priority Analysis
+- Source & Destination Analysis
+- Event Correlation
+- False Positive Identification
+- Security Event Monitoring
 
 ## Troubleshooting
 
-* DHCP Issues
-* Routing Issues
-* Firewall Issues
-* VPN Connectivity Issues
-* IDS/IPS Troubleshooting
+- DHCP Issues
+- Firewall Rule Issues
+- Routing Problems
+- VPN Connectivity Issues
+- IDS/IPS Troubleshooting
+- Network Connectivity Problems
 
 ---
 
-# Future Roadmap
+# Project Roadmap
 
-## Phase 9 – Windows Active Directory
+## Phase 1 – Network Foundation
 
-Learn:
+- pfSense Installation and Initial Configuration
+- LAN Interface Configuration
+- Static DHCP Reservations
+- Network Address Planning
+- Device Inventory Management
 
-* Active Directory
-* DNS
-* Group Policy
-* User Management
-* Organizational Units
+---
 
-## Phase 10 – Wazuh SIEM
+## Phase 2 – Firewall Management
 
-Learn:
+- Firewall Rule Fundamentals
+- Allow Rules
+- Block Rules
+- Source and Destination Filtering
+- Rule Order and Processing
+- Firewall Rule Testing
 
-* Log Aggregation
-* Detection Engineering
-* Threat Hunting
-* Incident Response
+---
 
-## Phase 11 – ISP Bridge Mode & Full pfSense Deployment
+## Phase 3 – Network Segmentation
 
-Target:
+- Proxmox Virtual Bridge (vmbr2) Configuration
+- OPT1 Interface Configuration
+- DHCP Server Configuration
+- Inter-Network Routing
+- LAN and LAB Network Isolation
+- Security Zone Separation
 
-```text
-ISP Modem (Bridge Mode)
-          ↓
-pfSense
-          ↓
-Entire Network
-```
+---
 
-## Phase 12 – OpenVPN Completion
+## Phase 4 – OpenVPN Remote Access *(Partially Completed)*
 
-Complete:
+- Public Key Infrastructure (PKI)
+- Certificate Authority Creation
+- Server Certificate Creation
+- Client Certificate Creation
+- OpenVPN Server Configuration
+- Tunnel Network Configuration
+- OpenVPN Firewall Rules
+- Router Port Forwarding
+- OpenVPN Client Export
+- Mobile Data Connectivity Testing *(Pending)*
+- External VPN Validation *(Pending)*
+- CGNAT Verification *(Pending)*
 
-* Mobile Data Testing
-* External Connectivity Validation
-* Remote Access Verification
+---
+
+## Phase 5 – Suricata IDS Deployment
+
+- Suricata Package Installation
+- ET Open Rules Configuration
+- Rule Category Management
+- WAN Interface Monitoring
+- OPT1 Interface Monitoring
+- Rule Updates
+- IDS Verification
+- Security Event Monitoring
+
+---
+
+## Phase 6 – Network Security Testing & Alert Analysis
+
+- Nmap Host Discovery
+- TCP SYN Scanning
+- Service Enumeration
+- Operating System Fingerprinting
+- Aggressive Network Scanning
+- Suricata Alert Investigation
+- SID Analysis
+- Priority Analysis
+- Event Correlation
+- False Positive Identification
+
+---
+
+## Phase 7 – Suricata IPS Configuration *(Partially Completed)*
+
+- Legacy IPS Mode Configuration
+- Block Offenders Configuration
+- Kill States Configuration
+- IP Blocking Policy
+- Traffic Inspection Validation
+- Alert Verification
+- Rule Tuning *(Pending)*
+- Automated Block Validation *(Pending)*
+- IPS Effectiveness Testing *(Pending)*
+
+---
+
+## Phase 8 – Windows Server Infrastructure
+
+- Windows Server 2022 Installation
+- Windows Server Network Configuration
+- Active Directory Domain Services (AD DS)
+- Domain Controller Promotion
+- Domain Creation (shanero.com)
+- DNS Server Configuration
+- Organizational Unit (OU) Design
+- User and Group Management
+- Windows 11 Pro Virtual Machine Deployment
+- Windows 11 Domain Join
+- Active Directory Computer Management
+- Group Policy Objects (GPO)
+- Shared Folder and NTFS Permissions
+- Domain Authentication Testing
+
+---
+
+## Phase 9 – Wazuh SIEM
+
+- Ubuntu Server Preparation
+- Wazuh Manager Installation
+- Wazuh Dashboard Installation
+- Filebeat Configuration
+- pfSense Log Integration
+- Windows Agent Deployment
+- Linux Agent Deployment
+- Security Event Collection
+- Alert Monitoring
+- Threat Detection
+
+---
+
+## Phase 10 – Enterprise Network Deployment
+
+- ISP Bridge Mode Configuration
+- pfSense as Primary Gateway
+- Full Home Network Migration
+- VLAN Planning and Implementation
+- DNS Security Hardening
+- Network Performance Optimization
+- High Availability Planning
 
 ---
 
 # Final Reflection
 
-This homelab project provided practical experience in networking, firewall administration, VPN technologies, network segmentation, intrusion detection, intrusion prevention, traffic analysis, and cybersecurity operations. The environment successfully simulated a small enterprise network and established a strong foundation for future growth in System Administration, Network Engineering, Security Operations (SOC), and Cybersecurity.
+This homelab project provided hands-on experience in enterprise networking, firewall administration, VPN technologies, network segmentation, intrusion detection, intrusion prevention, traffic analysis, and security monitoring. Through practical implementation using Proxmox VE, pfSense, Suricata, OpenVPN, and multiple virtual machines, the project simulated a small enterprise environment while developing skills aligned with Network Administration, System Administration, Cybersecurity, and Security Operations Center (SOC) roles.
+
+The roadmap continues with Windows Server Infrastructure, Wazuh SIEM, and Enterprise Network Deployment to further expand knowledge in Active Directory administration, centralized log management, and production-grade network architecture.
