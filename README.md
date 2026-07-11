@@ -311,17 +311,19 @@ IT-Infrastructure-Security-Portfolio
 ├── README.md
 │
 ├── homelab-project
-│   ├── roadmap-1
+│   ├── Homelab-R1.md
 │   │   └── README.md
 │   │
-│   ├── roadmap-2
-│   │   └── Active-Directory.md
+│   ├── IT-Helpdesk-lab-with-Kevtech.md
 │   │
-│   └── images
+│   ├── ServiceDesk-Sim-Docu-D1.md
+│   │ 
+│   └── ServiceDesk-Sim-Docu-D2.md
 │
 ├── networking-practices
-│
+│   └── School Project Networking
 └── system-administration-practices
+    └── School Project Administration (Active Directory)
 ```
 
 ---
