@@ -15,14 +15,6 @@
 ```text
 ◐ Phase 4 – OpenVPN Remote Access
 ◐ Phase 7 – Suricata IPS Configuration
-◐ Phase 8 – Windows Server Infrastructure
-```
-
-## Not Started
-
-```text
-□ Phase 9 – Wazuh SIEM
-□ Phase 10 – Enterprise Network Deployment
 ```
 
 ---
@@ -197,54 +189,8 @@
 
 ---
 
-## Phase 8 – Windows Server Infrastructure
-
-- Windows Server 2022 Installation
-- Windows Server Network Configuration
-- Active Directory Domain Services (AD DS)
-- Domain Controller Promotion
-- Domain Creation (shanero.com)
-- DNS Server Configuration
-- Organizational Unit (OU) Design
-- User and Group Management
-- Windows 11 Pro Virtual Machine Deployment
-- Windows 11 Domain Join
-- Active Directory Computer Management
-- Group Policy Objects (GPO)
-- Shared Folder and NTFS Permissions
-- Domain Authentication Testing
-
----
-
-## Phase 9 – Wazuh SIEM
-
-- Ubuntu Server Preparation
-- Wazuh Manager Installation
-- Wazuh Dashboard Installation
-- Filebeat Configuration
-- pfSense Log Integration
-- Windows Agent Deployment
-- Linux Agent Deployment
-- Security Event Collection
-- Alert Monitoring
-- Threat Detection
-
----
-
-## Phase 10 – Enterprise Network Deployment
-
-- ISP Bridge Mode Configuration
-- pfSense as Primary Gateway
-- Full Home Network Migration
-- VLAN Planning and Implementation
-- DNS Security Hardening
-- Network Performance Optimization
-- High Availability Planning
-
----
-
 # Final Reflection
 
 This homelab project provided hands-on experience in enterprise networking, firewall administration, VPN technologies, network segmentation, intrusion detection, intrusion prevention, traffic analysis, and security monitoring. Through practical implementation using Proxmox VE, pfSense, Suricata, OpenVPN, and multiple virtual machines, the project simulates a small enterprise environment while developing skills aligned with Network Administration, Systems Administration, Cybersecurity, and Security Operations Center (SOC) roles.
 
-The roadmap continues with Windows Server Infrastructure, Wazuh SIEM, and Enterprise Network Deployment to further expand knowledge in Active Directory administration, centralized log management, and production-grade network architecture.
+The next stage of this homelab will continue in **Homelab-R2.md**, where the focus shifts from network infrastructure and security to enterprise systems administration, including Active Directory, Windows Server, centralized log management, and enterprise network services.
