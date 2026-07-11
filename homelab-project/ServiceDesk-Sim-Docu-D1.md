@@ -1,4 +1,4 @@
-# Day 2 Ticket: Cannot Access Marketing Shared Drive
+# Day 1 Ticket: Cannot Access Marketing Shared Drive
 
 ## Ticket 1 Objective
 Diagnose and resolve a remote user's inability to access files on the Marketing shared drive while working from home.
