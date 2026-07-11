@@ -186,45 +186,144 @@ The environment includes multiple virtual machines connected through pfSense, al
 
 ---
 
-# Homelab Roadmap
+# Homelab Roadmap 1
 
-## Phase 1
+## Phase 1 – Network Foundation
 
+- pfSense Installation and Initial Configuration
+- LAN Interface Configuration
 - Static DHCP Reservations
+- Network Address Planning
+- Device Inventory Management
 
-## Phase 2
+---
 
-- Firewall Rules
+## Phase 2 – Firewall Management
 
-## Phase 3
+- Firewall Rule Fundamentals
+- Allow Rules
+- Block Rules
+- Source and Destination Filtering
+- Rule Order and Processing
+- Firewall Rule Testing
 
-- Network Segmentation
+---
 
-## Phase 4
+## Phase 3 – Network Segmentation
 
-- OpenVPN Remote Access
+- Proxmox Virtual Bridge (vmbr2) Configuration
+- OPT1 Interface Configuration
+- DHCP Server Configuration
+- Inter-Network Routing
+- LAN and LAB Network Isolation
+- Security Zone Separation
 
-## Phase 5
+---
 
-- Nmap Security Testing
+## Phase 4 – OpenVPN Remote Access *(Partially Completed)*
 
-## Phase 6
+- Public Key Infrastructure (PKI)
+- Certificate Authority Creation
+- Server Certificate Creation
+- Client Certificate Creation
+- OpenVPN Server Configuration
+- Tunnel Network Configuration
+- OpenVPN Firewall Rules
+- Router Port Forwarding
+- OpenVPN Client Export
+- Mobile Data Connectivity Testing *(Pending)*
+- External VPN Validation *(Pending)*
+- CGNAT Verification *(Pending)*
 
-- Suricata Alert Analysis
+---
 
-## Phase 7
+## Phase 5 – Suricata IDS Deployment
 
-- Suricata IPS Configuration
+- Suricata Package Installation
+- ET Open Rules Configuration
+- Rule Category Management
+- WAN Interface Monitoring
+- OPT1 Interface Monitoring
+- Rule Updates
+- IDS Verification
+- Security Event Monitoring
 
-## Phase 8
+---
 
-- Windows Server Installation
-- Active Directory Domain Services
+## Phase 6 – Network Security Testing & Alert Analysis
+
+- Nmap Host Discovery
+- TCP SYN Scanning
+- Service Enumeration
+- Operating System Fingerprinting
+- Aggressive Network Scanning
+- Suricata Alert Investigation
+- SID Analysis
+- Priority Analysis
+- Event Correlation
+- False Positive Identification
+
+---
+
+## Phase 7 – Suricata IPS Configuration *(Partially Completed)*
+
+- Legacy IPS Mode Configuration
+- Block Offenders Configuration
+- Kill States Configuration
+- IP Blocking Policy
+- Traffic Inspection Validation
+- Alert Verification
+- Rule Tuning *(Pending)*
+- Automated Block Validation *(Pending)*
+- IPS Effectiveness Testing *(Pending)*
+
+---
+
+# Homelab Roadmap 1
+
+## Phase 8 – Windows Server Infrastructure
+
+- Windows Server 2022 Installation
+- Windows Server Network Configuration
+- Active Directory Domain Services (AD DS)
 - Domain Controller Promotion
 - Domain Creation (shanero.com)
-- Windows 11 Pro Deployment
+- DNS Server Configuration
+- Organizational Unit (OU) Design
+- User and Group Management
+- Windows 11 Pro Virtual Machine Deployment
 - Windows 11 Domain Join
 - Active Directory Computer Management
+- Group Policy Objects (GPO)
+- Shared Folder and NTFS Permissions
+- Domain Authentication Testing
+
+---
+
+## Phase 9 – Wazuh SIEM
+
+- Ubuntu Server Preparation
+- Wazuh Manager Installation
+- Wazuh Dashboard Installation
+- Filebeat Configuration
+- pfSense Log Integration
+- Windows Agent Deployment
+- Linux Agent Deployment
+- Security Event Collection
+- Alert Monitoring
+- Threat Detection
+
+---
+
+## Phase 10 – Enterprise Network Deployment
+
+- ISP Bridge Mode Configuration
+- pfSense as Primary Gateway
+- Full Home Network Migration
+- VLAN Planning and Implementation
+- DNS Security Hardening
+- Network Performance Optimization
+- High Availability Planning
 
 ---
 
