@@ -411,7 +411,8 @@ IT-Infrastructure-Security-Portfolio
 │
 ├── homelab-project
 │   ├── Homelab-R1.md
-│   │   └── README.md
+│   │
+│   ├── Homelab-R2.md   
 │   │
 │   ├── IT-Helpdesk-lab-with-Kevtech.md
 │   │
