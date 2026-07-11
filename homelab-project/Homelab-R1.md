@@ -7,23 +7,22 @@
 ✓ Phase 2 – Firewall Rules
 ✓ Phase 3 – Network Segmentation
 ✓ Phase 5 – Suricata IDS Deployment
-✓ Phase 6 – Network Security Testing (Nmap)
-✓ Phase 7 – Suricata Alert Analysis
+✓ Phase 6 – Network Security Testing & Alert Analysis
 ```
 
 ## Partially Completed
 
 ```text
 ◐ Phase 4 – OpenVPN Remote Access
-◐ Phase 8 – Suricata IPS Configuration
+◐ Phase 7 – Suricata IPS Configuration
 ```
 
 ## Not Started
 
 ```text
-□ Phase 9 – Windows Server Infrastructure
-□ Phase 10 – Wazuh SIEM
-□ Phase 11 – Enterprise Network Deployment
+□ Phase 8 – Windows Server Infrastructure
+□ Phase 9 – Wazuh SIEM
+□ Phase 10 – Enterprise Network Deployment
 ```
 
 ---
@@ -246,6 +245,6 @@
 
 # Final Reflection
 
-This homelab project provided hands-on experience in enterprise networking, firewall administration, VPN technologies, network segmentation, intrusion detection, intrusion prevention, traffic analysis, and security monitoring. Through practical implementation using Proxmox VE, pfSense, Suricata, OpenVPN, and multiple virtual machines, the project simulated a small enterprise environment while developing skills aligned with Network Administration, System Administration, Cybersecurity, and Security Operations Center (SOC) roles.
+This homelab project provided hands-on experience in enterprise networking, firewall administration, VPN technologies, network segmentation, intrusion detection, intrusion prevention, traffic analysis, and security monitoring. Through practical implementation using Proxmox VE, pfSense, Suricata, OpenVPN, and multiple virtual machines, the project simulates a small enterprise environment while developing skills aligned with Network Administration, Systems Administration, Cybersecurity, and Security Operations Center (SOC) roles.
 
 The roadmap continues with Windows Server Infrastructure, Wazuh SIEM, and Enterprise Network Deployment to further expand knowledge in Active Directory administration, centralized log management, and production-grade network architecture.
