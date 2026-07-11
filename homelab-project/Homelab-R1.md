@@ -15,12 +15,12 @@
 ```text
 ◐ Phase 4 – OpenVPN Remote Access
 ◐ Phase 7 – Suricata IPS Configuration
+◐ Phase 8 – Windows Server Infrastructure
 ```
 
 ## Not Started
 
 ```text
-□ Phase 8 – Windows Server Infrastructure
 □ Phase 9 – Wazuh SIEM
 □ Phase 10 – Enterprise Network Deployment
 ```
