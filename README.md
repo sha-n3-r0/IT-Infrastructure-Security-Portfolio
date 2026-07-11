@@ -279,7 +279,7 @@ The environment includes multiple virtual machines connected through pfSense, al
 
 ---
 
-# Homelab Roadmap 1
+# Homelab Roadmap 2
 
 ## Phase 8 – Windows Server Infrastructure
 
